@@ -4,3 +4,13 @@ google-genai>=1.0.0
 pypdf2>=3.0.0
 python-multipart>=0.0.9
 python-dotenv>=1.0.0
+
+
+
+""" COMMAND TO START BACKEND SERVER """
+
+lsof -ti :8000 | xargs kill -9 2>/dev/null
+cd /Users/parvgoyel/Downloads/AI_Career_Advisor
+cd backend
+source ../venv/bin/activate
+python3 -m uvicorn main:app --reload 
