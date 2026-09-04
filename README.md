@@ -31,4 +31,6 @@ An intelligent, full-stack career advisory web application powered by **FastAPI*
    ```bash
    git clone [https://github.com/parvgoyel6/AI-Career-Advisor.git](https://github.com/parvgoyel6/AI-Career-Advisor.git)
    cd AI-Career-Advisor
-   
+
+
+📄 **[Download Project Report (PDF)](Project_Report.pdf)**
