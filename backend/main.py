@@ -52,9 +52,16 @@ async def analyze_resume(
     4. 3-Month Learning Plan: (A brief week-by-week guide to master the missing skills)
     """
     
-    response = client.models.generate_content(
-        model='gemini-3.6-flash',
-        contents=prompt
-    )
+   try:
+        response = client.models.generate_content(
+            model='gemini-3.6-flash',
+            contents=prompt
+        )
+    except Exception as e:
+        print(f"gemini-3.6-flash busy ({e}), trying gemini-3.1-pro-preview...")
+        response = client.models.generate_content(
+            model='gemini-3.1-pro-preview',
+            contents=prompt
+        )
     
     return {"analysis": response.text}
